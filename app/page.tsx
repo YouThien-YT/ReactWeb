@@ -23,7 +23,9 @@ import {useState} from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-
+  const handleClick = () => {
+    window.location.href = 'https://www.facebook.com/YouThien.YT/';
+  };
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -56,7 +58,10 @@ export default function Home() {
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-900 md:text-6xl dark:text-gray-100 " > 
-          <AiFillTwitterCircle className="cursor-pointer hover:text-blue-500" onClick={() => setDarkMode(!darkMode)}></AiFillTwitterCircle>         
+          <AiFillTwitterCircle className="cursor-pointer hover:text-blue-500" onClick={handleClick}></AiFillTwitterCircle>         
+         {/* <a href="https://www.facebook.com/YouThien.YT/"> 
+         <AiFillTwitterCircle className=" hover:text-blue-500"></AiFillTwitterCircle>         
+         </a> */}
           <AiFillLinkedin></AiFillLinkedin>
           <AiFillYoutube></AiFillYoutube>
         </div>
