@@ -23,7 +23,13 @@ import {useState} from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const handleClick = () => {
+  const handleClickFb = () => {
+    window.location.href = 'https://www.facebook.com/YouThien.YT/';
+  };
+  const handleClickIn = () => {
+    window.location.href = 'https://www.facebook.com/YouThien.YT/';
+  };
+  const handleClickYt = () => {
     window.location.href = 'https://www.facebook.com/YouThien.YT/';
   };
   return (
@@ -39,8 +45,8 @@ export default function Home() {
           <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-amber-600 dark:hover:text-gray-100 hover:text-gray-800 text-2xl md:text-4xl"></BsFillMoonStarsFill>
           </li>
-          <li>
-            <a href="#" className="bg-gradient-to-r from-cyan-600 to-teal-200 text-black px-5 py-3 rounded-md ml-8 " > 
+          <li >
+            <a href="#" className=" font-burtons hover:text-amber-200 bg-gradient-to-r from-cyan-600 to-teal-200  text-black px-5 py-3 rounded-md ml-8 " > 
             Resume 
             </a>
           </li>
@@ -58,12 +64,12 @@ export default function Home() {
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-900 md:text-6xl dark:text-gray-100 " > 
-          <AiFillTwitterCircle className="cursor-pointer hover:text-blue-500" onClick={handleClick}></AiFillTwitterCircle>         
+          <AiFillTwitterCircle className="cursor-pointer hover:text-blue-500" onClick={handleClickFb}></AiFillTwitterCircle>         
          {/* <a href="https://www.facebook.com/YouThien.YT/"> 
          <AiFillTwitterCircle className=" hover:text-blue-500"></AiFillTwitterCircle>         
          </a> */}
-          <AiFillLinkedin></AiFillLinkedin>
-          <AiFillYoutube></AiFillYoutube>
+          <AiFillLinkedin className="cursor-pointer hover:text-blue-500" onClick={handleClickIn}></AiFillLinkedin>
+          <AiFillYoutube className="cursor-pointer hover:text-blue-500" onClick={handleClickYt}></AiFillYoutube>
         </div>
         <div className="relative bg-gradient-to-b from-teal-500 rounded-full mx-auto w-80 h-80 mt-20 overflow-hidden md:w-96 md:h-96">
           <Image src={avatar} layout="fill" objectFit="cover" ></Image>
