@@ -1,11 +1,14 @@
 'use client'
 import Head from "next/head";
 // import { IconName } from "react-icons/bs";
-import { BsFillMoonStarsFill,} from "react-icons/bs";
+import {
+  BsFillMoonStarsFill,
+  BsFacebook
+} from "react-icons/bs";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
-  AiFillYoutube 
+  AiFillYoutube, 
 } from "react-icons/ai";
 import Image from "next/image";
 import avatar from '../public/avatar.png';
@@ -27,10 +30,10 @@ export default function Home() {
     window.location.href = 'https://www.facebook.com/YouThien.YT/';
   };
   const handleClickIn = () => {
-    window.location.href = 'https://www.facebook.com/YouThien.YT/';
+    window.location.href = 'https://www.instagram.com/youthien.yt/';
   };
   const handleClickYt = () => {
-    window.location.href = 'https://www.facebook.com/YouThien.YT/';
+    window.location.href = 'https://www.youtube.com/@YouThien-YT';
   };
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -64,12 +67,12 @@ export default function Home() {
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-900 md:text-6xl dark:text-gray-100 " > 
-          <AiFillTwitterCircle className="cursor-pointer hover:text-blue-500" onClick={handleClickFb}></AiFillTwitterCircle>         
+          <BsFacebook className="cursor-pointer hover:text-blue-700" onClick={handleClickFb}></BsFacebook>         
          {/* <a href="https://www.facebook.com/YouThien.YT/"> 
          <AiFillTwitterCircle className=" hover:text-blue-500"></AiFillTwitterCircle>         
          </a> */}
-          <AiFillLinkedin className="cursor-pointer hover:text-blue-500" onClick={handleClickIn}></AiFillLinkedin>
-          <AiFillYoutube className="cursor-pointer hover:text-blue-500" onClick={handleClickYt}></AiFillYoutube>
+          <AiFillLinkedin className="cursor-pointer hover:text-red-400" onClick={handleClickIn}></AiFillLinkedin>
+          <AiFillYoutube className="cursor-pointer hover:text-red-600" onClick={handleClickYt}></AiFillYoutube>
         </div>
         <div className="relative bg-gradient-to-b from-teal-500 rounded-full mx-auto w-80 h-80 mt-20 overflow-hidden md:w-96 md:h-96">
           <Image src={avatar} layout="fill" objectFit="cover" ></Image>
